@@ -24,3 +24,4 @@ fi
 echo "[info][$(date +'%F %H:%M:%S')]准备启动tomcat..."
 $binPath"/startup.sh"
 # this is a change
+# a change too
