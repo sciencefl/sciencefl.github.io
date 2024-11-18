@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       '@vuepress/bundler-webpack':
-        specifier: 2.0.0-rc.18
+        specifier: ^2.0.0-rc.18
         version: 2.0.0-rc.18
       sass-embedded:
         specifier: ^1.79.5
@@ -4026,7 +4026,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 22.9.0
 
   '@types/send@0.17.4':
     dependencies:
