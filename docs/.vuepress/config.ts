@@ -1,4 +1,5 @@
 import { defineUserConfig } from "vuepress";
+import { webpackBundler } from "@vuepress/bundler-webpack";
 
 import theme from "./theme.js";
 
@@ -18,6 +19,11 @@ export default defineUserConfig({
   shouldPrefetch: false,
 
   theme,
+
+  bundler: webpackBundler({
+    postcss: {},
+    vue: {},
+  }),
 
   // Enable it with pwa
   // shouldPrefetch: false,

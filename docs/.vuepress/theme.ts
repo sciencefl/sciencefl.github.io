@@ -17,9 +17,9 @@ export default hopeTheme({
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
   // 默认为 GitHub. 同时也可以是一个完整的 URL
-  repo: "https://sciencefl.github.io/",
+  repo: "https://github.com/sciencefl/sciencefl.github.io",
   // 自定义仓库链接文字。默认从 `repo` 中自动推断为 "GitHub" / "GitLab" / "Gitee" / "Bitbucket" 其中之一，或是 "Source"。
-  repoLabel: "GitHub",
+  repoLabel: "Gitee",
   // 是否在导航栏内显示仓库链接，默认为 `true`
   repoDisplay: true,
   // 文档存放路径
@@ -31,7 +31,7 @@ export default hopeTheme({
   // copyright 默认为 Copyright © <作者>
   copyright: `
   版权声明：自由转载 - 非商用 - 非衍生 - 保持署名<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">（创意共享 4.0 许可证）</a>|
-  Copyright © 2023-present LearnData</a>
+  Copyright © 2024-present FlynnDocs</a>
   `,
   displayFooter: true,
   // 页脚，支持使用 HTMLString 以显示备案信息等
@@ -68,8 +68,8 @@ export default hopeTheme({
 
   // 主题功能选项：https://theme-hope.vuejs.press/zh/config/theme/feature.html
   blog: {
-    name: "清顺",
-    description: "迷信新工具，热衷于研究开源软件、心理学理论，定期分享探索成果",
+    name: "Flynn",
+    description: "勇敢做自己",
     intro: "/intro.html",
     medias: {
     },
@@ -114,20 +114,16 @@ export default hopeTheme({
       size: true,
     },
 
-    // 本地搜索，和上方二选一
-    searchPro: {
-      // 索引全部内容
-      indexContent: true,
+    // // // 本地搜索，目前有bug
+    // searchPro: {
+    //   // 索引全部内容
+    //   indexContent: true,
+    //   hotReload: true,
+    // },
+    search: {
+      isSearchable: (page) => page.path !== "/",
+      maxSuggestions: 10,
     },
-
-    feed: {
-      atom: true,
-      json: true,
-      rss: true,
-      count: 10,
-      sorter: (a, b) => Number(b.frontmatter.date) - Number(a.frontmatter.date),
-    },
-
   },
 
   // 开发模式下是否启动热更新，显示所有更改并重新渲染
