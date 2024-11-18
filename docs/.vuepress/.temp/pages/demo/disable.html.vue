@@ -12,7 +12,6 @@
 <li>Prev/Next link</li>
 <li>Comment</li>
 <li>Footer</li>
-<li>Back to top button</li>
 </ul>
 </div></template>
 
