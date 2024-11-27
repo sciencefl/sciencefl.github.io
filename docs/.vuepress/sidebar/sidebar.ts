@@ -7,7 +7,7 @@ export const zhSidebar = sidebar({
                 {
                     text: "设计原则与设计思想",
                     icon: "basic",
-                    link: "设计原则与思想",
+                    link: "设计原则与思想/",
                 },
             ],
         // 必须放在最后面
