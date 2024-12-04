@@ -9,6 +9,11 @@ export const zhSidebar = sidebar({
                     icon: "basic",
                     link: "设计原则与思想",
                 },
+                {
+                    text: "设计模式总结",
+                    icon: "basic",
+                    link: "设计原则与思想",
+                },
             ],
         // 必须放在最后面
         "/":
