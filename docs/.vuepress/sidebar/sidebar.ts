@@ -11,7 +11,7 @@ export const zhSidebar = sidebar({
                 },
                 {
                     text: "设计模式总结",
-                    icon: "basic",
+                    icon: "Facebook",
                     link: "设计模式总结",
                 },
             ],
