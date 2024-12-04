@@ -12,7 +12,7 @@ export const zhSidebar = sidebar({
                 {
                     text: "设计模式总结",
                     icon: "basic",
-                    link: "设计原则与思想",
+                    link: "设计模式总结",
                 },
             ],
         // 必须放在最后面
