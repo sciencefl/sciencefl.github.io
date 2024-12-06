@@ -7,7 +7,7 @@ export const zhSidebar = sidebar({
                 {
                     text: "设计原则与设计思想",
                     icon: "basic",
-                    link: "设计原则与思想",
+                    link: "design-principles-ideas",
                 },
                 {
                     text: "设计模式总结",
