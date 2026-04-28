@@ -1,6 +1,11 @@
-## 计算机基础的学习笔记
+# Spring
 
-- 算法
-- 计算机网络
-- 操作系统
-- 数据库
+这里整理 Spring 相关的学习笔记与实践经验。
+
+## 计划内容
+
+- Spring Framework 基础
+- Spring Boot
+- Spring MVC
+- Spring 事务与 AOP
+- 常见工程实践
