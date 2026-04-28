@@ -38,7 +38,7 @@ export const zhSidebar = sidebar({
       text: "环境部署",
       icon: "server",
       prefix: "",
-      children: ["", "K8s 集群ARM64完整安装指南"],
+      children: ["", "本地部署与启动", "K8s 集群ARM64完整安装指南"],
     },
   ],
   "/learn/": [
