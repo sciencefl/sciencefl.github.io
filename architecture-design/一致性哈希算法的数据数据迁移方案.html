@@ -31,7 +31,7 @@
     </script>
     <meta property="og:url" content="https://sciencefl.github.io/architecture-design/%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95%E7%9A%84%E6%95%B0%E6%8D%AE%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB%E6%96%B9%E6%A1%88.html"><meta property="og:site_name" content="FlynnDocs 学习笔记"><meta property="og:description" content="在一致性哈希算法中，扩容时数据迁移的核心逻辑是通过哈希环的动态调整和虚拟节点技术实现局部数据迁移，而非全量迁移。以下是具体实现机制及生产环境实践： 一、数据迁移的核心机制 哈希环的局部影响 当新增节点加入哈希环时，仅影响其在环上逆时针方向相邻节点到该节点之间的数据区间。例如，新增节点D位于节点A和B之间时，原本属于节点A的（D, A]区间内的数据会被迁..."><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2026-04-28T08:44:04.000Z"><meta property="article:modified_time" content="2026-04-28T08:44:04.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"","image":[""],"dateModified":"2026-04-28T08:44:04.000Z","author":[{"@type":"Person","name":"Flynn","url":"https://sciencefl.github.io/"}]}</script><title>FlynnDocs 学习笔记</title><meta name="description" content="在一致性哈希算法中，扩容时数据迁移的核心逻辑是通过哈希环的动态调整和虚拟节点技术实现局部数据迁移，而非全量迁移。以下是具体实现机制及生产环境实践： 一、数据迁移的核心机制 哈希环的局部影响 当新增节点加入哈希环时，仅影响其在环上逆时针方向相邻节点到该节点之间的数据区间。例如，新增节点D位于节点A和B之间时，原本属于节点A的（D, A]区间内的数据会被迁...">
     <link rel="stylesheet" href="/assets/css/styles.c1ba7444.css">
-    <link rel="preload" href="/assets/js/runtime~app.d9ed852b.js" as="script"><link rel="preload" href="/assets/css/styles.c1ba7444.css" as="style"><link rel="preload" href="/assets/js/550.79a871a2.js" as="script"><link rel="preload" href="/assets/js/app.8ab74c8d.js" as="script">
+    <link rel="preload" href="/assets/js/runtime~app.d9ed852b.js" as="script"><link rel="preload" href="/assets/css/styles.c1ba7444.css" as="style"><link rel="preload" href="/assets/js/550.79a871a2.js" as="script"><link rel="preload" href="/assets/js/app.3cae946f.js" as="script">
     
   </head>
   <body>
@@ -39,6 +39,6 @@
   版权声明：自由转载 - 非商用 - 非衍生 - 保持署名<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">（创意共享 4.0 许可证）</a>|
   Copyright © 2024-present FlynnDocs</a>
   </div></footer></div><!--]--><!--]--><!--[--><!----><!--[--><!--]--><!--]--><!--]--></div>
-    <script src="/assets/js/runtime~app.d9ed852b.js" defer></script><script src="/assets/js/550.79a871a2.js" defer></script><script src="/assets/js/app.8ab74c8d.js" defer></script>
+    <script src="/assets/js/runtime~app.d9ed852b.js" defer></script><script src="/assets/js/550.79a871a2.js" defer></script><script src="/assets/js/app.3cae946f.js" defer></script>
   </body>
 </html>
