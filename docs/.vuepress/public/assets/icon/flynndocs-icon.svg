@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="FlynnDocs icon">
+  <rect width="512" height="512" fill="#173d3a"/>
+  <path fill="#f7ead0" d="M172 124h26c14 0 24 10 24 24v216c0 14-10 24-24 24h-26c-14 0-24-10-24-24V148c0-14 10-24 24-24Z"/>
+  <path fill="#f7ead0" d="M198 124h154c14 0 24 10 24 24v22c0 14-10 24-24 24H198v-70Z"/>
+  <path fill="#f7ead0" d="M198 222h122c14 0 24 10 24 24v18c0 14-10 24-24 24H198v-66Z"/>
+  <path fill="#78c6a3" d="M252 330h102c10 0 18 8 18 18s-8 18-18 18H252c-10 0-18-8-18-18s8-18 18-18Z"/>
+  <circle cx="374" cy="178" r="30" fill="#ee7b58"/>
+  <path fill="#173d3a" d="M374 160l7 12 13 6-13 6-7 12-7-12-13-6 13-6 7-12Z"/>
+</svg>
