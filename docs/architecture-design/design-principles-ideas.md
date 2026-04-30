@@ -14,7 +14,7 @@ tag:
 
 面向对象、设计原则、设计模式、编程规范、重构技巧之间的关系。
 
-![img](https://static001.geekbang.org/resource/image/f3/d3/f3262ef8152517d3b11bfc3f2d2b12d3.png)
+![代码质量方法论关系图](/assets/images/architecture-design/code-quality-methods.svg)
 
 - 面向对象编程因为具有丰富的特性(抽象、封装、继承、多态)，可以实现很多复杂的设计思路，是很多设计原则、设计模式等编码实现的基础。
 - 设计原则是指导我们代码设计的一些经验总结，对与某些场景下，是否应该应用某种设计模式具有指导意义，比如，开闭原则是很多设计模式(策略、模板等)的指导原则。
