@@ -107,7 +107,7 @@ sudo vi /etc/fstab
 
 **在文件末尾添加**（替换`你的UUID`为上一步获取的值）：
 
-```TOML
+```Bash
 # /dev/sdb1 数据盘，XFS文件系统，开机挂载
 UUID=你的UUID  /data  xfs  defaults  0 0
 ```
@@ -169,7 +169,7 @@ sudo vi /etc/fstab
 
 **在文件末尾追加以下内容**（标准配置，无语法错误）：
 
-```TOML
+```Bash
 # K8s 绑定挂载（禁止软链接，避免服务异常）
 /data/var/lib/longhorn    /var/lib/longhorn    none    bind    0 0
 /data/var/lib/containerd  /var/lib/containerd  none    bind    0 0
@@ -618,14 +618,14 @@ kubectl version
 
 ## 4. 部署 nginx 测试
 
-```TOML
+```Bash
 kubectl create deployment nginx --image=nginx --replicas=2
 kubectl  get pods -n default
 ```
 
 ✅ 结果：部署 成功
 
-```TOML
+```Bash
 [admin@ssc-kp01-101 containerd]$ kubectl  get pods -n default
 NAME                     READY   STATUS    RESTARTS   AGE
 nginx-66686b6766-8lszs   1/1     Running   0          15m
@@ -642,7 +642,7 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 
 **作用**：支持 `kubectl top` 查看资源使用率，支持自动扩缩容。
 
-```TOML
+```Bash
 [admin@ssc-kp01-101 containerd]$ kubectl top node
 NAME           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
 ssc-kp01-05    78m          0%       1472Mi          0%          
