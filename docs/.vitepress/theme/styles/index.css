@@ -1,0 +1,97 @@
+@import "./typography.css";
+@import "./layout.css";
+
+:root {
+  --vp-c-brand-1: #bf3b2f;
+  --vp-c-brand-2: #a83229;
+  --vp-c-brand-3: #d95a4e;
+  --vp-c-brand-soft: rgba(191, 59, 47, 0.12);
+  --site-bg: #fbfbfa;
+  --site-surface: #ffffff;
+  --site-soft: #f1f2f0;
+  --site-text: #171a1c;
+  --site-muted: #687178;
+  --site-border: #dfe2df;
+  --site-architecture: #bf3b2f;
+  --site-ai: #217a73;
+  --site-vibe: #b37b18;
+  --site-archive: #66717b;
+}
+
+.dark {
+  --site-bg: #161918;
+  --site-surface: #1d2220;
+  --site-soft: #252b28;
+  --site-text: #f0f2ef;
+  --site-muted: #aab3ad;
+  --site-border: #39413d;
+  --site-architecture: #ef8176;
+  --site-ai: #71c8b8;
+  --site-vibe: #dfb353;
+  --site-archive: #aeb8bd;
+}
+
+body {
+  background: var(--site-bg);
+  color: var(--site-text);
+}
+
+.VPNav {
+  border-bottom: 1px solid var(--site-border);
+  background: color-mix(in srgb, var(--site-bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.VPNavBarTitle .title {
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.VPNavBarMenuLink {
+  font-size: 13px;
+}
+
+.VPDoc h1,
+.VPDoc h2,
+.VPDoc h3 {
+  letter-spacing: 0;
+}
+
+.VPDoc h1 {
+  font-size: 2.2rem;
+  line-height: 1.25;
+}
+
+.VPDoc h2 {
+  margin-top: 2.75rem;
+}
+
+.VPDoc a {
+  text-underline-offset: 3px;
+}
+
+.vp-doc div[class*="language-"] {
+  border: 1px solid var(--site-border);
+  border-radius: 6px;
+}
+
+.vp-doc .mermaid {
+  overflow-x: auto;
+  margin: 24px 0;
+  padding: 18px;
+  border: 1px solid var(--site-border);
+  border-radius: 6px;
+  background: var(--site-surface);
+  text-align: center;
+}
+
+.vp-doc .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 720px) {
+  .VPDoc h1 {
+    font-size: 1.8rem;
+  }
+}
