@@ -1,7 +1,6 @@
 ---
 title: 关于
 icon: circle-info
-cover: /assets/images/cover3.jpg
 ---
 
 # 关于

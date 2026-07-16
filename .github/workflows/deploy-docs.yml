@@ -1,30 +1,31 @@
-
 name: 部署文档
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  deploy-gh-pages:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          # 如果你文档需要 Git 子模块，取消注释下一行
-          # submodules: true
 
       - name: 设置 pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 10.33.2
-
 
       - name: 设置 Node.js
         uses: actions/setup-node@v4
@@ -33,20 +34,30 @@ jobs:
           cache: pnpm
 
       - name: 安装依赖
-        run: |
-          corepack enable
-          pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: 构建文档
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: |-
-          pnpm run docs:build
-          > docs/.vuepress/dist/.nojekyll
+          VITEPRESS_BASE: /
+        run: pnpm run docs:build
 
-      - name: 部署文档
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: 配置 Pages
+        uses: actions/configure-pages@v5
+
+      - name: 上传静态产物
+        uses: actions/upload-pages-artifact@v3
         with:
-          # 部署文档
-          branch: gh-pages
-          folder: docs/.vuepress/dist
+          path: docs/.vitepress/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: 部署到 GitHub Pages
+    steps:
+      - name: 部署
+        id: deployment
+        uses: actions/deploy-pages@v4
