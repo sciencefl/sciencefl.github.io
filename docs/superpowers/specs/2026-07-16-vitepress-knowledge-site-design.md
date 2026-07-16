@@ -2,7 +2,7 @@
 
 ## Goal
 
-Replace the current VuePress 2 and vuepress-theme-hope site with a VitePress static knowledge site. The new site will focus on three primary domains: architecture knowledge, AI programming and principles, and Vibe Coding. Existing documents will be preserved under `/archive/` without legacy URL redirects.
+> Replace the current VuePress 2 and vuepress-theme-hope site with a VitePress static knowledge site. The new site will focus on three primary domains: architecture knowledge, AI programming and principles, and Vibe Coding. Existing documents will be preserved under `/archive/` without legacy URL redirects.
 
 ## Scope
 
