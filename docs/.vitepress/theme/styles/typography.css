@@ -1,8 +1,6 @@
 :root {
   --site-font-sans: "Noto Sans SC", "Source Han Sans SC", "PingFang SC",
     "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
-  --site-font-mono: "JetBrains Mono", "SFMono-Regular", Consolas,
-    "Liberation Mono", monospace;
 }
 
 html {
@@ -32,11 +30,6 @@ textarea {
 .vp-doc ul,
 .vp-doc ol {
   margin: 1.1rem 0;
-}
-
-.vp-doc code,
-.vp-doc pre {
-  font-family: var(--site-font-mono);
 }
 
 .vp-doc table {

@@ -42,14 +42,65 @@ const archiveSidebar: DefaultTheme.SidebarItem[] = [
   { text: "归档说明", link: "/archive/" },
   {
     text: "历史目录",
+    collapsed: false,
     items: [
-      { text: "架构设计", link: "/archive/architecture-design/" },
-      { text: "计算机基础", link: "/archive/cs-basics/" },
-      { text: "环境部署", link: "/archive/env-deploy/" },
-      { text: "学习资料", link: "/archive/learn/" },
+      {
+        text: "架构设计",
+        collapsed: false,
+        items: [
+          { text: "架构学习概览", link: "/archive/architecture-design/" },
+          {
+            text: "NIO 相比传统 IO，有哪些优化",
+            link: "/archive/architecture-design/NIO相比传统IO，有哪些优化",
+          },
+          { text: "Redis 笔记", link: "/archive/architecture-design/Redis笔记" },
+          {
+            text: "设计原则与思想",
+            link: "/archive/architecture-design/design-principles-ideas",
+          },
+          {
+            text: "一致性哈希算法的数据迁移方案",
+            link: "/archive/architecture-design/一致性哈希算法的数据数据迁移方案",
+          },
+          { text: "双亲委派", link: "/archive/architecture-design/双亲委派" },
+          { text: "设计模式总结", link: "/archive/architecture-design/设计模式总结" },
+        ],
+      },
+      {
+        text: "计算机基础",
+        collapsed: false,
+        items: [
+          { text: "计算机基础概览", link: "/archive/cs-basics/" },
+          {
+            text: "Java",
+            collapsed: false,
+            items: [{ text: "Java 基础概览", link: "/archive/cs-basics/java/" }],
+          },
+        ],
+      },
+      {
+        text: "环境部署",
+        collapsed: false,
+        items: [
+          { text: "环境部署概览", link: "/archive/env-deploy/" },
+          { text: "本地部署与启动", link: "/archive/env-deploy/本地部署与启动" },
+          {
+            text: "K8s 集群 ARM64 完整安装指南",
+            link: "/archive/env-deploy/K8s 集群ARM64完整安装指南",
+          },
+        ],
+      },
+      {
+        text: "学习资料",
+        collapsed: false,
+        items: [
+          { text: "数据要素学习报告", link: "/archive/learn/数据要素学习报告" },
+        ],
+      },
       { text: "阅读与兴趣", link: "/archive/reading/" },
       { text: "生活爱好", link: "/archive/life-hobbies/" },
       { text: "Spring", link: "/archive/spring/" },
+      { text: "旧版站点说明", link: "/archive/intro" },
     ],
   },
 ];
@@ -65,7 +116,8 @@ export default defineConfig({
   srcExclude: ["superpowers/**"],
   ignoreDeadLinks: [/^\/archive\//],
   markdown: {
-    lineNumbers: true,
+
+        lineNumbers: false,
     config(md) {
       const defaultFence = md.renderer.rules.fence;
       md.renderer.rules.fence = (tokens, index, options, env, self) => {
